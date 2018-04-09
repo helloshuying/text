@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<style>
+	body{
+		background: #634e4e;
+		margin-top: 100px;
+	}
+	div{
+		background: #fff;
+		width: 250px;
+		height: 310px;
+		margin-left:auto;
+		margin-right:auto;
+
+	}
+		button{
+			width: 50px;
+			height: 50px;
+			font-size: 20px;
+			box-shadow: 3px 5px 8px 0px;
+			border-color: #FFF;
+		}
+		input{
+			width: 220px;
+			height: 30px;
+			font-size: 20px;
+			box-shadow: 3px 2px 10px 0px;
+			margin-bottom: 10px;
+			border-color: #FFF;
+		}
+		table{
+		margin-left:auto;
+		margin-right:auto;
+		padding-top: 25px;
+	}
+	button:active{
+		box-shadow: -3px -5px 8px 0px;
+		background: #fff;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="root">
+	<table>
+	<tr>
+		<td colspan="4"><input type="text" id="rr" value="0"></td>
+		
+	</tr>
+	<tr>
+		<td><button onclick="dianji7()">7</button></td>
+		<td><button onclick="dianji8()">8</button></td>
+		<td><button onclick="dianji9()">9</button></td>
+		<td><button onclick="chu()">/</button></td>
+	</tr>
+	<tr>
+		<td><button onclick="dianji4()">4</button></td>
+		<td><button onclick="dianji5()">5</button></td>
+		<td><button onclick="dianji6()">6</button></td>
+		<td><button onclick="chen()">*</button></td>
+	</tr>
+	<tr>
+		<td><button onclick="dianji1()">1</button></td>
+		<td><button onclick="dianji2()">2</button></td>
+		<td><button onclick="dianji3()">3</button></td>
+		<td><button onclick="jian()">-</button></td>
+	</tr>
+	<tr>
+		<td><button onclick="dianji0()">0</button></td>
+		<td><button onclick="cc()">C</button></td>
+		<td><button onclick="jia()">+</button></td>
+		<td><button onclick="dengyu()">=</button></td>
+	</tr>
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</table>
+	</div>
+	<script>
+	var num=0;
+	var ysf="+";
+		function dianji0(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=0;
+			document.getElementById('rr').value=vvv*1;
+		}
+		function dianji1(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=1;
+			document.getElementById('rr').value=vvv*1;
+		}
+		function dianji2(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=2;
+			document.getElementById('rr').value=vvv*1;
+		}
+		function dianji3(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=3;
+			document.getElementById('rr').value=vvv*1;
+		}
+		function dianji4(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=4;
+			document.getElementById('rr').value=vvv*1;
+		}
+		function dianji5(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=5;
+			document.getElementById('rr').value=vvv*1;
+		}
+		function dianji6(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=6;
+			document.getElementById('rr').value=vvv*1;
+		}
+		function dianji7(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=7;
+			document.getElementById('rr').value=vvv*1;
+		}
+		function dianji8(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=8;
+			document.getElementById('rr').value=vvv*1;
+		}function dianji9(){
+			var vvv=document.getElementById('rr').value;
+			vvv+=9;
+			document.getElementById('rr').value=vvv*1;
+		}
+		
+		function jia(){
+			num = document.getElementById('rr').value*1;
+			document.getElementById('rr').value=0;
+			ysf ="+";
+		}
+		function jian(){
+			num = document.getElementById('rr').value*1;
+			document.getElementById('rr').value=0;
+			ysf ="-";
+		}
+		function chu(){
+			num = document.getElementById('rr').value*1;
+			document.getElementById('rr').value=0;
+			ysf ="/";
+		}
+		function chen(){
+			num = document.getElementById('rr').value*1;
+			document.getElementById('rr').value=0;
+			ysf ="*";
+		}
+		function cc(){
+			num = document.getElementById('rr').value*1;
+			document.getElementById('rr').value=0;
+			ysf ="0";
+			num =0
+
+		}
+		function dengyu(){
+			var bb =document.getElementById('rr').value;
+			document.getElementById('rr').value = eval(num+ysf+bb*1);
+			
+		}
+
+	</script>
+	
+
+</body>
+</html>

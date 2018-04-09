@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        form {
+            margin-top: 20px;
+            margin-left: 50px;
+            padding-top: 50px;
+            line-height: 30px;
+            width: 350px;
+            height: 500px;
+
+        }
+        html,body { margin: 0px;
+           padding: 0px;
+            background: #caa3d6;
+        }
+
+div {
+    margin-top: 50px;
+            margin-left: 400px;
+    background: #f2c5ff;
+     width: 350px;
+            height: 500px;
+}
+    </style>
+</head>
+<body>
+<div>
+<form>
+    <h1>登录界面</h1>
+    姓名：<input type="text"name="Uname"><br>
+    密码：<input type="password" name="pass"><br>
+    <input type="button" value="登录" onclick="login()">
+</form>
+    </div>
+<script>
+    function login(){
+        var ff=document.forms[0];
+        var uname=ff.Uname.value;
+        var pass=ff.pass.value;
+
+        var users =localStorage.getItem('users');
+        if(!users){
+            alert("请先注册");
+            return;
+        }
+        users=JSON.parse(users);
+        if(!Array.isArray(users)){
+            localStorage.clear();
+            alert("登录失败！请重新注册");
+            return;
+        }
+        var has=users.some(function(item){
+            return item.name==uname && item.pass == pass;
+        });
+        if (has){
+            alert("登录成功");
+        }else {
+            alert("登录失败");
+        }
+        location.href="xiugai.html";
+    }
+</script>
+</body>
+</html>

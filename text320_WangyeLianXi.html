@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="nav.css">
+
+</head>
+<body onload="changeColor()">
+<div id="root">
+    <div id="head">
+        <div id="logo">
+            <img src="E:\320\09D58PICzbh_1024.jpg" id="tub" width="80" height="80" >
+            <h1>值得你拥有</h1>
+            <h2 align="right">坐落于喜马拉雅山山脉大房子</h2>
+        </div>
+        <ul id="nav">
+            <li>
+                <div class="fr">列表项</div>
+                <div class="sc">列表项</div>
+            </li>
+            <li>
+                <div class="fr">列表项</div>
+                <div class="sc">列表项</div>
+            </li>
+            <li>
+                <div class="fr">列表项</div>
+                <div class="sc">列表项</div>
+            </li>
+            <li>
+                <div class="fr">列表项</div>
+                <div class="sc">列表项</div>
+            </li>
+            <li>
+                <div class="fr">列表项</div>
+                <div class="sc">列表项</div>
+            </li>
+            <li>
+                <div class="fr">列表项</div>
+                <div class="sc">列表项</div>
+            </li>
+        </ul>
+    </div>
+    <div id="left" class="mid">
+        <img src="E:\320\37c58PICJwH_1024.jpg" width="240" height="300">
+        <ul>
+            <li><a href="javascript:show(0)">用户列表</a></li>
+            <li><a href="javascript:show(1)">新增用户</a></li>
+            <li><a href="javascript:show(2)">修改用户</a></li>
+            <li><a href="javascript:show(3)">充值</a></li>
+        </ul>
+    </div>
+    <div id="right" class="mid">
+        <div onload="changeColor()" class="child-content yincang">
+
+            <table id="tb">
+                <tr>
+                    <td colspan="4" bgcolor="#d6e4ff"><h2>用户列表</h2></td>
+                </tr>
+                <tr>
+                    <td>姓名</td>
+                    <td>年龄</td>
+                    <td>电话号码</td>
+                    <td>登入次数</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>21</td>
+                    <td>15515224112</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>21</td>
+                    <td>15515224112</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>21</td>
+                    <td>15515224112</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>21</td>
+                    <td>15515224112</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>21</td>
+                    <td>15515224112</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>21</td>
+                    <td>15515224112</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>21</td>
+                    <td>15515224112</td>
+                    <td>22</td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>21</td>
+                    <td>15515224112</td>
+                    <td>22</td>
+                </tr>
+            </table>
+        </div>
+        <div class="child-content yincang">
+            <form>
+                <table id="zcjm">
+                    <tr>
+                        <td colspan="2"><h2>用户注册</h2></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Username">用户名:</label></td>
+                        <td><input type="text" name="userName"/></td>
+
+                    </tr>
+                    <tr>
+                        <td><label>性别：</label></td>
+                        <td><span>
+			男<input type="radio" name="sex" value=man>
+			女<input type="radio" name="sex" value=woman>
+		</span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="birthday">出生日期:</label></td>
+                        <td><input type="date" value="2014-01-13"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tel">手机号码：</label></td>
+                        <td><input type="number" name="number"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">密码：</label></td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="number">确认密码:</label></td>
+                        <td><input type="password"></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="注册"></td>
+                        <td><input type="reset" value="重置"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="child-content yincang">
+            <form>
+                <table id="xiugai">
+                     <tr>
+                        <td colspan="2"><h2>修改密码</h2></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Username">用户名:</label></td>
+                        <td><input type="text" name="userName"/></td>
+
+                    </tr>
+                    <tr>
+                        <td><label for="number">输入新密码：</label></td>
+                        <td><input type="password"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="number">确认密码:</label></td>
+                        <td><input type="password"></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="确认"></td>
+                        <td><input type="reset" value="重置"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="child-content yincang">
+            <form>
+                <table id="cz">
+                    <tr>
+                        <td colspan="2"><h2>账号充值</h2></td>
+                    </tr>
+                     <tr>
+                        <td><label for="Username">用户名：</label></td>
+                        <td><input type="Username"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="number">输入金额：</label></td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="确认"></td>
+                        <td><input type="reset" value="重置"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id="foot">
+        湖南省长沙市152号&nbsp邮编：4122244<br>Email：hdjfhdjf122@
+    </div>
+</div>
+<script>
+    var rr = document.getElementById('right');
+    function show(e) {
+        for (var i = 0; i < 4; i++) {
+            if (e == i) {
+                rr.children[e].classList.remove('yincang');
+            } else {
+                rr.children[i].classList.add('yincang');
+            }
+        }
+
+    }
+    function changeColor() {
+        var mytableRows = document.getElementById('tb').rows;
+        var count = mytableRows.length;
+        for (var i = 0; i < count; i++) {
+            if (i % 2 == 0) {
+                mytableRows[i].setAttribute("class", "first");
+            }
+            else {
+                mytableRows[i].setAttribute("class", "second");
+            }
+
+        }
+    }
+
+</script>
+</body>
+</html>

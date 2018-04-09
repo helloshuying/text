@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            width: 300px;
+        }
+        td {
+            border: 1px solid #CCC;
+        }
+    </style>
+</head>
+<body>
+<table id="tbl">
+    <tr>
+        <td>商品名</td>
+        <td>数量</td>
+        <td>单价</td>
+        <td>总数</td>
+    </tr>
+    <tr>
+        <td>乔大牌球鞋</td>
+        <td>1双</td>
+        <td>998</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>黑人牙膏</td>
+        <td>5只</td>
+        <td>20元/支</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>金骏眉顶级  </td>
+        <td>1.25两 </td>
+        <td>328/两</td>
+        <td></td>
+    </tr>
+</table>
+<script>
+    var tbl =document.getElementById('tbl');
+    var trs =tbl.getElementsByTagName('tr');
+    for(var i=1;i<trs.length;i++){
+        var tds =trs[i].getElementsByTagName('td');
+    tds[3].innerText=parseFloat(tds[1].innerText) * parseFloat (tds[2].innerText)+"元";
+        if (i%2==1){
+            trs[i].style.background='#efefef';
+        }
+        else {
+            trs[i].style.background='#ff0';
+        }
+    }
+//for(;;){
+//    alert("dfdf")
+//}
+    var age=prompt("");
+    age*=1;
+    if(age>10){
+        alert("大人");
+    }else if(age>5){
+        alert("不小了");
+    }
+    else {
+         alert("小了");
+    }
+
+</script>
+</body>
+</html>

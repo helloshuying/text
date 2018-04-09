@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #clock{
+            width: 300px;
+            height: 50px;
+            margin: 400px;
+            background: black;
+
+        }
+        #time {
+            margin:15px;
+            margin-left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="clock">
+    <input type="text" id="time">
+    文本框一个，输入小写字母
+</div>
+<script>
+Date.prototype.toString =function(){
+        return this.getFullYear()+"年"+(this.getMonth()+1)+"月"+this.getDate()+"日       "+this.getHours()+":"+this.getMinutes()+":"+this.getSeconds();
+    }
+    setInterval(function(){
+        var date=new Date();
+        time.value=date;
+    },1000);
+</script>
+</body>
+</html>

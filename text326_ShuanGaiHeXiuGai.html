@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #root {
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #head {
+
+            height: 100px;
+        }
+
+        #middle {
+            display: flex;
+            /*采用flex布局*/
+        }
+
+        #foot {
+
+            height: 100px;
+        }
+
+        #left {
+
+            width: 300px;
+        }
+
+        #right {
+
+            width: 700px;
+        }
+        #tbl {
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+    <div id="head"></div>
+    <div id="middle">
+        <div id="left"></div>
+        <div id="right">
+            <table id="tbl">
+            </table>
+            <form id="ff" style="display: none">
+                <input type="text" id="name">
+                <input type="number" id="age">
+                男<input type="radio" name="sex" value="男">
+       女<input type="radio" name="sex" value="女">
+                <input type="button" value="修改" id="genXi" onclick="update()">
+            </form>
+        </div>
+    </div>
+    <div id="foot"></div>
+</div>
+<script>
+    var person =[
+        {name:"张三",age:33,shenXiao:"",sex:'男'},
+        {name:"老王",age:33,shenXiao:"",sex:'男'},
+        {name:"李四",age:33,shenXiao:"",sex:'男'},
+        {name:"王二狗",age:23,shenXiao:"",sex:'男'},
+    ];
+    function showTable(){
+//        建立数据和表格之间的映射
+        var str=""
+//    for(var i=0;i<person.length;i++){
+        for(var i in person){
+            str+="<tr>"
+            for(var j in person[i]){
+                str+="<td>"+person[i][j]+"</td>"
+            }
+//        str +=`
+//        <tr>
+//        <td>${person[i].name}</td>
+//        <td>${person[i].age}</td>
+//        <td>${person[i].sex}</td>
+//        <td>
+//        <a href="javascript:del(${i})">删除</a>
+//        </td>
+//        </tr>
+//        `;
+            str+=`<td><a href="javascript:del(${i})">删除</a>|<a href="javascript:gx(${i})">修改</a></td></tr>`
+    }
+    document.querySelector("#tbl").innerHTML =str;
+    }
+    showTable();
+    function del(line){
+        delete person[line];
+        showTable();
+    }
+    var ff=document.getElementById("ff")
+    function gx(line){
+
+        for(var i in person[line]){
+             r=line;
+        }
+
+//        ff.style.display='block';
+//        r=person[line];
+//        ff.uname.value=person[line].name;
+//        ff.age.value=person[line].age;
+//        ff.sex.value=person[line].sex;
+        showTable();ff.style.display='block';
+    }
+    function update(){
+        for(var i in person[r]){
+            person[r][i]=ff[i].value;
+        }
+//        r.name=ff.uname.value;
+//        r.age=ff.age.value;
+//        r.sex=ff.sex.value;
+        showTable()
+        ff.style.display="none";
+    }
+
+//    function max(a,b){
+//        return a>b ? a:b;
+//    }
+//    function f(x){
+//        return 10*x+22;
+//    }
+//    var xiaoMianGuan={
+//        name:"老面店",
+//        address:"88号",
+//        phone:"0745",
+//        paoMian:function(a){
+//            var caidan=["1","2","3","4"];
+//            return caidan[a];
+//        }
+//
+//    };
+//    var mian=xiaoMianGuan.paomian(1);
+//    console.log(mian);
+//   var shenXiao=[狗鸡猴羊]
+</script>
+</body>
+</html>

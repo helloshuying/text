@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" onclick="haha(this)">
+<h1 id="alert"></h1>
+
+
+<script>
+    var hh =document.getElementById('alert');
+    var arr=[];
+    var b=""
+    function haha(a) {
+        var str = a.value;
+        for (var i = 0; i < a.value.length; i++) {
+          a+=arr.pop(str[i]);
+        }
+
+        hh.innerHTML=b;
+    }
+    </script>
+</body>
+</html>

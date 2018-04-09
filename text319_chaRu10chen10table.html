@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	
+	.first{background-color:#CCC;
+	
+}
+ .second{
+	background-color:#CCf;
+	
+}
+		#tb{
+			border:1px;
+			width: 600px;
+			height: 30px;
+			text-align: center;
+		}
+		td:hover{
+			background: #FFF;
+			font-size: 5px;
+
+		}
+		td:active{
+			color: red;
+		}
+
+	</style>
+</head>
+<body onload="changeColor()">
+<table id="tb">
+</table>
+	<script>
+	for(var i=0;i<10;i++){
+	document.getElementById('tb').innerHTML+="<tr><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td></tr>"}
+
+	
+	function changeColor(){
+			var mytableRows=document.getElementById('tb').rows;
+			var count=mytableRows.length;   
+			for(var i=0;i<count;i++){
+				if(i%2==0){
+					mytableRows[i].setAttribute("class","first");
+				}
+				else 
+				{
+					mytableRows[i].setAttribute("class","second");
+				}
+
+			}
+		}
+	</script>
+</body>
+</html>

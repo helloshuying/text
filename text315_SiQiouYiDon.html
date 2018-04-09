@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	a{
+
+	height: 90px;
+    width: 90px;
+    display: block;/*转换为块级标签*/
+    border-radius: 47%;/*变圆*/
+    /*border: 1px solid;*/
+    text-align: center;
+    line-height: 90px;
+    text-decoration: none;
+    color:black;
+    transition:all 1s;/*过度*/
+   box-shadow: 0px 0px 0px 0px;
+}
+    #o{
+    	animation:a1 10s;
+    	position: fixed;
+    	top: 0px;
+    	left: 0px;
+    	background: red;
+
+
+    
+    }
+
+    #c{
+    	animation:a2 10s;
+    	position: fixed;
+    	top:0px;
+    	left: 500px;
+    	background: #d4e021fc;
+    }
+    #s{
+    	animation:a3 10s;
+    	position: fixed;
+    	top: 500px;
+    	left:500px;
+    	background:#3621e0fc;
+    }
+    #f{
+    	animation:a4 10s;
+    	position: fixed;
+    	top:500px;
+    	left: 0px;
+    	background: #2de021fc;
+    }
+     @keyframes a1{
+     	from{
+     		opacity: 0;
+     	}
+     	10%{
+     		display: block;
+     	}
+    	20%{
+    		box-shadow: 6px 5px 18px 2px;
+    	}
+    	30%{
+    		box-shadow: 6px 5px 18px 2px;
+    		transform:translate(0px,0px);
+    	}
+    	40%{
+    		box-shadow: 6px 5px 18px 2px;
+    		transform:translate(500px,0px);/*向右*/
+    	}
+    	60%{
+    		box-shadow: 6px 5px 18px 2px;
+    		transform:translate(500px,500px);/*向下*/
+    	}
+    	80%{
+    		box-shadow: 6px 5px 18px 2px;
+    		transform:translate(0px,500px);/*向左*/
+    	}
+    	100%{
+    		box-shadow: 6px 5px 18px 2px;
+    		transform:translate(250px,250px);/*中间*/
+    	}
+    	
+
+    }
+    @keyframes a2{
+    	from{
+     		opacity: 0;
+     	}
+     	10%{
+     		display: block;
+     	}
+    	20%{
+    		box-shadow: 6px 5px 18px 2px;
+    	}
+    	30%{
+    		box-shadow: 6px 5px 18px 2px;
+    		transform:translate(0px,0px);
+    	}
+    	40%{
+    		box-shadow: 6px 5px 18px 2px;
+    		transform:translate(0px,500px);
+    	}
+    	60%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(-500px,500px);
+    	}
+    	80%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(-500px,0px);
+    	}
+    	100%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(-250px,250px);
+    	}
+
+
+    }
+    @keyframes a3{
+    	from{
+     		opacity: 0;
+     	}
+     	10%{
+     		display: block;
+     	}
+    	20%{
+    		box-shadow: 6px 5px 18px 2px;
+    	}
+    	30%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(0px,0px);
+    	}
+    	40%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(-500px,0px);
+    	}
+    	60%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(-500px,-500px);
+    	}
+    	80%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(0px,-500px);
+    	}
+    	100%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(-250px,-250px);
+    	}
+
+
+    }
+@keyframes a4{
+	from{
+     		opacity: 0;
+     	}
+     	10%{
+     		display: block;
+     	}
+    	20%{
+    		box-shadow: 6px 5px 18px 2px;
+    	}
+    	30%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(0px,0px);
+    	}
+    	40%{box-shadow: 6px 5px 18px 2px;box-shadow: 6px 5px 18px 2px;
+    		transform:translate(0px,-500px);
+    	}
+    	60%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(500px,-500px);
+    	}
+    	80%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(500px,0px);
+    	}
+    	100%{box-shadow: 6px 5px 18px 2px;
+    		transform:translate(250px,-250px);
+    	}
+
+
+    }
+
+</style>
+</head>
+<body>
+	<a href="javascript:void(0)" id="o">1</a>
+	<a href="javascript:void(0)" id="c">2</a>
+	<a href="javascript:void(0)" id="s">3</a>
+	<a href="javascript:void(0)" id="f">4</a>
+</body>
+</html>

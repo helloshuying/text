@@ -1,0 +1,147 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+}
+#root{
+    width: 700px;
+    margin: 0px auto;
+    position: relative;
+    min-height: 780px;
+     background: #fff3e9;
+}
+#head {
+
+}
+.mid {
+    position: absolute;
+    min-height: 500px;
+    top:130px;
+}
+#left{
+    width: 280px;
+    padding: 20px;
+     background: #adbcda;
+
+}
+#left li {
+    width: 240px;
+    height: 30px;
+    border: 1px solid #CCC;
+}
+#left li :hover {
+    color: red;
+
+}
+#left li >a {
+    line-height: 30px;
+    text-decoration: none;
+    color: #666;
+    margin-left: 10px;
+
+}
+#right {
+    right: 0px;
+    width: 420px;
+    background: #d6e4ff;
+}
+#foot {
+   background: #fff3e9;
+    height: 150px;
+    width: 680px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    color: #60cc43;
+    font-size: 20px;
+     padding: 10px;
+}
+#nav {
+    height: 30px;
+    width: 600px;
+    margin: 0px auto;
+    overflow: hidden;
+    border-radius: 5px;
+
+
+}
+
+#nav li { /*后代选择器*/
+    float: left;
+    height: 30px;
+    width: 100px;
+    background: red;
+    text-align: center;
+    line-height: 30px;
+    color: #FFF;
+}
+
+.sc {
+    background: #b471ff;
+
+}
+
+#nav li {
+    transition: all 1s;
+}
+
+#nav li:hover {
+    transform: translate(0, -100%);
+}
+#logo {
+    overflow: hidden;
+    height: 80px;
+    font-family: "Adobe Naskh Medium";
+    padding: 10px;
+    background: #fff3e9;
+    color: #60cc43;
+}
+.yincang{
+    display: none;
+}
+#zcjm{
+    line-height: 40px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.first{background-color:#CCC;
+
+}
+ .second{
+	background-color:#CCf;
+
+}
+		#tb{
+			border:1px;
+			width: 300px;
+			text-align: center;
+        line-height: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;}
+        #xiugai{
+             line-height: 40px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    text-align: center;
+        }
+       #cz {
+            line-height: 40px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    text-align: center;
+       }
+#tub{
+    display:inline;
+    float: left;
+}
+

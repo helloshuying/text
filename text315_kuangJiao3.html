@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面布局</title>
+	<style>
+	/*固定浮动布局*/
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		#root{
+			width: 600px;
+			margin: 0 auto;
+			min-height: 800px;
+			background: red;
+			
+		}
+		#header{
+			height: 100px;
+			background: #ccc;
+		}
+		#left{
+			height: 600px;
+			background: #330;
+			width: 100px;
+			float: left;
+
+		}
+		#middle{
+			height: 600px;
+			width: 400px;
+			background: #888;
+			float: left;
+		}
+		#right{
+			height: 600px;
+			width: 100px;
+			background: #333;
+			float: left;
+		}
+		#foot{
+			height: 100px;清除左边浮动布局
+			background: #000;
+			clear: left;/**/
+		}
+	</style>
+</head>
+<body>
+	<div id="root">
+		<div id="header"></div>
+		<div id="left"></div>
+		<div id="middle"></div>
+		<div id="right"></div>
+		<div id="foot"></div>
+	</div>
+</body>
+</html>

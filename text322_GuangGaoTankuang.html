@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+div{
+	border:1px solid #CCC;
+}
+#root{
+	height: 100px;
+	width: 150px;
+    background-image: url("1.jpg");
+    animation:rot infinite 5s;
+
+}
+#head{
+	height: 27px;
+	width: 100%;
+	background: #7da6f5;
+}
+	button{
+		float: right;
+		font-size: 15px;
+		font-family: 黑体;
+        box-shadow: 1px 2px 3px 0px;
+
+	}
+
+	.left {
+            position: absolute;
+            left: 10px;
+        }
+        .right {
+            position: absolute;
+            right: 10px;
+        }
+     @keyframes rot{
+                50%{
+                    transform:translate( 0px,500px);
+                }
+         100%{
+                    transform:translate( 0px,0px);
+                }
+            }
+</style>
+<body>
+	<div id="root" onclick="taozhou(this)" class="left">
+		<div id="head">
+		<button>×</button>
+		</div>
+
+
+			<h3></h3>
+
+	</div>
+<script>
+function taozhou(a){
+//        判断位置，
+        if (a.classList.contains('left')){
+ //               如果在左边，我就让他去右边，
+            a.classList.remove('left');
+            a.classList.add('right');
+        }
+        else {
+            a.classList.remove('right');
+            a.classList.add('left');
+        }
+
+//        否者去左边；
+    }
+	var num =0
+    setInterval (function (){
+        var dd =document.querySelector("h3");
+        if (num++%2==0){
+            dd.innerHTML="遥看瀑布挂前川";
+            dd.style.color="#f00"
+        }
+        else {
+            dd.innerHTML="飞流直下三千尺";
+            dd.style.color="#0f0"
+        }
+    },2000);
+    </script>
+</body>
+</html>

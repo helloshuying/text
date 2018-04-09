@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #tbl {
+            width: 400px;
+            line-height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<table id="tbl">
+    <tr>
+        <td> 姓名</td>
+        <td>年龄</td>
+        <td>性别</td>
+        <td>段位</td>
+        <td>编辑 </td>
+    </tr>
+</table>
+
+<button onclick="addform()">添加</button>
+
+<form id="ff" style="display: none">
+   <div> 姓名：<input type="text" id="uname"></div>
+    <div>
+        年龄：<input type="number" id="age">
+    </div>
+    <div>
+        <label>性别：</label>
+    男<input type="radio" name="sex" value="男">
+       女<input type="radio" name="sex" value="女">
+    </div>
+    <div>
+        段位：
+        <select id="duanwei">
+            <option value="青铜">青铜</option>
+            <option value="白银">白银</option>
+            <option value="王者">王者</option>
+        </select>
+    </div>
+    <div>
+    <input type="button" value="添加" onclick="addtr()">
+        <div id="gg" style="display: none" >
+    <input type="button" name="gx" value="更新" onclick="update()" style="margin-right: 100px">
+</div>
+    </div>
+</form>
+
+
+<script>
+    var tbl=document.getElementById('tbl');
+
+    var num=0;
+    function addtr(){
+    var str = `<tr id="haha${++num}">
+        <td> ${ff.uname.value}</td>
+        <td>${ff.age.value}</td>
+        <td>${ff.sex.value}</td>
+        <td>${ff.duanwei.value}</td>
+        <td><a href="javascript:del(${num})">删除</a>|<a href="javascript:gx(${num})">更新</a> </td>
+    </tr>`;
+        tbl.innerHTML+=str;
+        ff.style.display='none';
+
+
+
+    }
+    function del(abc){
+        var tr =document.getElementById("haha"+abc);
+        tr.remove();
+    }
+    function addform(){
+        var ff=document.getElementById("ff");
+        ff.style.display='block';
+
+
+    }
+function gx(e){
+
+        gg.style.display='block';
+ff.style.display='block';
+    var trs= document.getElementById("haha" +e);
+    var tds=trs.getElementsByTagName('td');
+    r=trs.rowIndex;
+    ff.uname.value=tds[0].innerHTML;
+    ff.age.value=tds[1].innerHTML;
+    ff.sex.value=tds[2].innerHTML;
+    ff.duanwei.value=tds[3].innerHTML;
+}
+ function update(){
+
+     var tab=document.getElementById('tbl');
+     tab.rows[r].cells[0].innerHTML=ff.uname.value;
+    tab.rows[r].cells[1].innerHTML=ff.age.value;
+     tab.rows[r].cells[2].innerHTML=ff.sex.value;
+     tab.rows[r].cells[3].innerHTML=ff.duanwei.value;
+     gg.style.display='none';
+ff.style.display='none'
+
+}
+
+</script>
+</body>
+</html>
